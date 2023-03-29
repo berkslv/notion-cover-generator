@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "start:live": "nodemon ./bin/www"
+    "start": "node index.js",
+    "start:live": "nodemon index.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
