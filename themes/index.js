@@ -20,7 +20,7 @@ const themes = {
       <style>
         .title {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 50px;
+          font-size: 100px;
           font-weight: 500;
           fill: #fff;
         }
