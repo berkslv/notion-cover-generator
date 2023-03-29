@@ -1,45 +1,60 @@
-const themes = {
-  green: (text) => {
-    const colors = {
-      background: "#191919",
-      first: "#009664",
-      second: "#00ba7c",
-      third: "#02e095",
-    };
+const waveSVG = require("./utils/wave");
+const blobSVG = require("./utils/blob");
+const stackedSVG = require("./utils/stacked");
+const circleSVG = require("./utils/circle");
 
-    return `
-    <svg
-        id="visual"
-        viewBox="0 0 900 450"
-        width="900"
-        height="450"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        version="1.1"
-    >
-      <style>
-        .title {
-          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 100px;
-          font-weight: 500;
-          fill: #fff;
-        }
-      </style>
-      <rect x="0" y="0" width="900" height="450" fill="${colors.background}" />
-        <path
-        d="M0 229L21.5 218.3C43 207.7 86 186.3 128.8 189C171.7 191.7 214.3 218.3 257.2 226.3C300 234.3 343 223.7 385.8 212.8C428.7 202 471.3 191 514.2 193C557 195 600 210 642.8 212.7C685.7 215.3 728.3 205.7 771.2 203.7C814 201.7 857 207.3 878.5 210.2L900 213L900 0L878.5 0C857 0 814 0 771.2 0C728.3 0 685.7 0 642.8 0C600 0 557 0 514.2 0C471.3 0 428.7 0 385.8 0C343 0 300 0 257.2 0C214.3 0 171.7 0 128.8 0C86 0 43 0 21.5 0L0 0Z"
-        fill="${colors.first}"
-        />
-        <path
-        d="M0 162L21.5 156.8C43 151.7 86 141.3 128.8 135.3C171.7 129.3 214.3 127.7 257.2 131.8C300 136 343 146 385.8 151.2C428.7 156.3 471.3 156.7 514.2 154.7C557 152.7 600 148.3 642.8 138.5C685.7 128.7 728.3 113.3 771.2 115.3C814 117.3 857 136.7 878.5 146.3L900 156L900 0L878.5 0C857 0 814 0 771.2 0C728.3 0 685.7 0 642.8 0C600 0 557 0 514.2 0C471.3 0 428.7 0 385.8 0C343 0 300 0 257.2 0C214.3 0 171.7 0 128.8 0C86 0 43 0 21.5 0L0 0Z"
-        fill="${colors.second}"
-        />
-        <path
-        d="M0 94L21.5 84.7C43 75.3 86 56.7 128.8 52.2C171.7 47.7 214.3 57.3 257.2 66.3C300 75.3 343 83.7 385.8 77.7C428.7 71.7 471.3 51.3 514.2 49C557 46.7 600 62.3 642.8 73C685.7 83.7 728.3 89.3 771.2 91C814 92.7 857 90.3 878.5 89.2L900 88L900 0L878.5 0C857 0 814 0 771.2 0C728.3 0 685.7 0 642.8 0C600 0 557 0 514.2 0C471.3 0 428.7 0 385.8 0C343 0 300 0 257.2 0C214.3 0 171.7 0 128.8 0C86 0 43 0 21.5 0L0 0Z"
-        fill="${colors.third}"
-        />
-        <text x="50%" y="50%" class="title" text-anchor="middle" alignment-baseline="central">${text}</text>
-    </svg>`;
+const colors = {
+  green: {
+    background: "#191919",
+    primary: "#009664",
+    secondary: "#00ba7c",
+    tertiary: "#02e095",
+  },
+
+  blue: {
+    background: "#191919",
+    primary: "#1d4ed8",
+    secondary: "#3b82f6",
+    tertiary: "#93c5fd",
+  },
+
+  red: {
+    background: "#191919",
+    primary: "#b91c1c",
+    secondary: "#ef4444",
+    tertiary: "#fca5a5",
+  },
+
+  yellow: {
+    background: "#191919",
+    primary: "#854d0e",
+    secondary: "#eab308",
+    tertiary: "#fde047",
+  },
+
+  purple: {
+    background: "#191919",
+    primary: "#6b21a8",
+    secondary: "#d946ef",
+    tertiary: "#f0abfc",
+  },
+};
+
+const themes = {
+  wave(theme, text) {
+    return waveSVG.primary(text, colors[theme]);
+  },
+
+  blob(theme, text) {
+    return blobSVG.primary(text, colors[theme]);
+  },
+
+  stacked(theme, text) {
+    return stackedSVG.primary(text, colors[theme]);
+  },
+
+  circle(theme, text) {
+    return circleSVG.primary(text, colors[theme]);
   },
 };
 

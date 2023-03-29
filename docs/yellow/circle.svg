@@ -1,0 +1,32 @@
+
+        <svg
+            id="visual"
+            viewBox="0 0 900 450"
+            width="900"
+            height="450"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            >
+            <style>
+                .title {
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-size: 100px;
+                    font-weight: 500;
+                    fill: #fff;
+                }
+            </style>
+            <rect x="0" y="0" width="900" height="450" fill="#191919" /><g
+                fill="#854d0e"
+            ><circle r="110" cx="158" cy="286" /><circle r="55" cx="590" cy="29" /><circle
+                r="83"
+                cx="181"
+                cy="52"
+                /><circle r="57" cx="435" cy="419" /><circle
+                r="92"
+                cx="839"
+                cy="268"
+            /></g>
+          <text x="50%" y="50%" class="title" text-anchor="middle" alignment-baseline="central">CS50</text>
+        </svg>
+        

@@ -1,1 +1,1 @@
-# notion-cover-generator
+# Notion cover generator
