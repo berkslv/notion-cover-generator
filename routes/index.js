@@ -4,6 +4,8 @@ const themes = require("../themes");
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
+  res.setHeader("Content-Type", "image/svg+xml");
+  
   const theme = req.query.theme || "green";
   const text = req.query.text || "Cover title";
 
