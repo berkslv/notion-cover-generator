@@ -23,8 +23,8 @@ router.get("/", function (req, res, next) {
   }
 });
 
-router.get("/themes", function (req, res, next) {
-  res.send(process.env.SECRET_KEY || "A8C385DEA81351BD9B125DECDB945");
-});
+// router.get("/themes", function (req, res, next) {
+//   res.send(process.env.SECRET_KEY || "A8C385DEA81351BD9B125DECDB945");
+// });
 
 module.exports = router;
